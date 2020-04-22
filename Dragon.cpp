@@ -6,7 +6,7 @@ Dragon::Dragon(std::string name_, int hitPoints, int armor) : name(name_) :
     (
         hp(hitPoints),
         armor_(armor),
-        attackDamage_(4)
+        attackDamage_(80)
     );
 ~Dragon() {};
 

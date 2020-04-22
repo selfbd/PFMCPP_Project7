@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Character.h"
+
 struct DragonSlayer : Character
 {
     DragonSlayer(std::string name_, int hitPoints, int armor);
