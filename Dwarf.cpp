@@ -1,13 +1,6 @@
 #include "Dwarf.h"
 
-Dwarf::Dwarf(std::string name_, int hitPoints, int armor) : name(name_) :
-    Character
-    (
-        hp(hitPoints),
-        armor_(armor),
-        attackDamage_(4)
-    );
-~Dwarf() {};
+Dwarf::Dwarf(std::string name_, int hitPoints, int armor) : Character(hitPoints, armor, 4), name(name_) {}
 
-std::string& Dwarf::getName() override { return name };
-std::string Dwarf::getStats() override { return "get stats" };
+const std::string& Dwarf::getName() { return name; }
+std::string Dwarf::getStats() { return "get stats"; }

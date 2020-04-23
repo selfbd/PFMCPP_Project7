@@ -1,10 +1,12 @@
 #pragma once
 
-struct Dwarf : Character
+#include "Character.h"
+
+struct Dwarf : public Character
 {
     Dwarf(std::string name_, int hitPoints, int armor);
 
-    std::string& getName() override;
+    const std::string& getName() override;
     std::string getStats() override;
 
 private:
