@@ -1,14 +1,7 @@
 #include "Dragon.h"
 #include "DragonSlayer.h"
 
-Dragon::Dragon(std::string name_, int hitPoints, int armor) : name(name_) :
-    Character
-    (
-        hp(hitPoints),
-        armor_(armor),
-        attackDamage_(80)
-    );
-~Dragon() {};
+//Dragon::Dragon
 
 void Dragon::attack(Character &other)
 {
@@ -24,5 +17,6 @@ void Dragon::attack(Character &other)
     }
 }
 
-std::string& Dragon::getName() override { return name };
-std::string Dragon::getStats() override { return "get stats" };
+//Dragon::getName
+
+//Dragon::getStats

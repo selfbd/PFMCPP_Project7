@@ -1,7 +1,5 @@
 #pragma once
 
-#include "Character.h"
-
 struct Dwarf : Character
 {
     Dwarf(std::string name_, int hitPoints, int armor);
