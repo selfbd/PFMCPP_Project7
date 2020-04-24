@@ -72,6 +72,12 @@ int main()
     Dragon dragon { "Garry The Dragon", 200, 50 };
     DragonSlayer dragonSlayer { "Virgil the Dragon Slayer", 8, 5 };
     
+    // BDS debug
+std::cout << "dwarf stats:\n" << dwarf.getStats() << std::endl;
+std::cout << "paladin stats:\n" << paladin.getStats() << std::endl;
+std::cout << "dragon stats:\n" << dragon.getStats() << std::endl;
+std::cout << "dragonSlayer stats:\n" << dragonSlayer.getStats() << std::endl;
+
     /*
     std::cout << "\nstart of battle" << std::endl;
 

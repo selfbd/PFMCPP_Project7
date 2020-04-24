@@ -1,5 +1,6 @@
 #include "DragonSlayer.h"
 #include "Dragon.h"
+#include "Utility.h"
 #include <cassert>
 
 DragonSlayer::DragonSlayer(std::string name_, int hitPoints, int armor) : Character(hitPoints, armor, 4), name(name_) {}
@@ -26,4 +27,4 @@ void DragonSlayer::attack(Character& other)
         
 }
 
-std::string DragonSlayer::getStats() { return "get stats"; }
+std::string DragonSlayer::getStats() { return getCharacterStats(this); }
