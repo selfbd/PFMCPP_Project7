@@ -76,9 +76,9 @@ int main()
     Dragon dragon { "Garry The Dragon", 200, 50 };
     DragonSlayer dragonSlayer { "Virgil the Dragon Slayer", 8, 5 };
 
-    /*
     std::cout << "\nstart of battle" << std::endl;
 
+    /*
     paladin.defend();
     dragon.attack( paladin );
     dwarf.attack( dragon );
@@ -94,10 +94,10 @@ int main()
     //the dragon slayer has no friends and kills everyone 
     dragonSlayer.attack( paladin );
     dragonSlayer.attack( dwarf ); 
-    
-    std::cout << std::endl << "end of battle stats:" << std::endl;
-    */    
+    */   
 
+    std::cout << std::endl << "end of battle stats:" << std::endl;
+    
     std::vector<Character*> characters { &dwarf, &paladin, &dragon, &dragonSlayer };
     for( auto* character : characters )
         character->printStats();
