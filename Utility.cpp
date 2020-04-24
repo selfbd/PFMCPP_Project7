@@ -6,7 +6,7 @@
 #include <ctime>
 
 void initialize() { seedRandomNumberGenerator(); }
-void seedRandomNumberGenerator() { srand((unsigned) time(NULL)); }
+void seedRandomNumberGenerator() { srand(time(NULL)); }
 int getRandomNumber() { return (rand() % 32767) % 9; }
 
 std::vector<std::unique_ptr<Item>> makeHelpfulItems(int num)
