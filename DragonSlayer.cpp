@@ -17,6 +17,10 @@ void DragonSlayer::attack(Character& other)
         //so they should USE their attack item before attacking the dragon... 
         //note that items are single-use only, so you need to reset it after use.  
         //look in the Character class for how the other item types are reset after use.
+
+
+
+        
         while( dragon->getHP() > 0 )
         {
           dragon->takeDamage(attackDamage);
@@ -28,3 +32,23 @@ void DragonSlayer::attack(Character& other)
 }
 
 std::string DragonSlayer::getStats() { return getCharacterStats(this); }
+
+/*
+// ******************************
+// from Dragon
+
+void Dragon::attack(Character &other)
+{
+    std::cout << name << " is attacking " << other.getName() << "!!!" << std::endl;
+    if( auto* slayer = dynamic_cast<DragonSlayer*>(&other) )
+    {
+        //dragons can't attack dragon slayers
+        slayer->defend();
+    }
+    else
+    {
+        Character::attack(other);
+    }
+}
+
+*/

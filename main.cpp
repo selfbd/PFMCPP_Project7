@@ -62,21 +62,19 @@ send me a DM to check your pull request
 #include "Paladin.h"
 #include "Dragon.h"
 #include "DragonSlayer.h"
+#include "Utility.h"
+
 //==========================================================
 //==========================================================
 int main()
 {
+    initialize();
+    
     //Parameters:   name, hit points, armor
     Dwarf dwarf { "Maldin the Dwarf", 3, 1 };
     Paladin paladin { "Warrick the Paladin", 5, 2 };
     Dragon dragon { "Garry The Dragon", 200, 50 };
     DragonSlayer dragonSlayer { "Virgil the Dragon Slayer", 8, 5 };
-    
-    // BDS debug
-//std::cout << "dwarf stats:\n" << dwarf.getStats() << std::endl;
-//std::cout << "paladin stats:\n" << paladin.getStats() << std::endl;
-//std::cout << "dragon stats:\n" << dragon.getStats() << std::endl;
-//std::cout << "dragonSlayer stats:\n" << dragonSlayer.getStats() << std::endl;
 
     /*
     std::cout << "\nstart of battle" << std::endl;

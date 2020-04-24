@@ -1,8 +1,13 @@
-#include "Utility.h"
-
 #include "HelpfulItem.h"
 #include "DefensiveItem.h"
 #include "Character.h"
+#include "Utility.h"
+#include <cstdlib>
+#include <ctime>
+
+void initialize() { seedRandomNumberGenerator(); }
+void seedRandomNumberGenerator() { srand((unsigned) time(NULL)); }
+int getRandomNumber() { return (rand() % 32767) % 9; }
 
 std::vector<std::unique_ptr<Item>> makeHelpfulItems(int num)
 {
