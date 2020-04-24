@@ -73,10 +73,10 @@ int main()
     DragonSlayer dragonSlayer { "Virgil the Dragon Slayer", 8, 5 };
     
     // BDS debug
-std::cout << "dwarf stats:\n" << dwarf.getStats() << std::endl;
-std::cout << "paladin stats:\n" << paladin.getStats() << std::endl;
-std::cout << "dragon stats:\n" << dragon.getStats() << std::endl;
-std::cout << "dragonSlayer stats:\n" << dragonSlayer.getStats() << std::endl;
+//std::cout << "dwarf stats:\n" << dwarf.getStats() << std::endl;
+//std::cout << "paladin stats:\n" << paladin.getStats() << std::endl;
+//std::cout << "dragon stats:\n" << dragon.getStats() << std::endl;
+//std::cout << "dragonSlayer stats:\n" << dragonSlayer.getStats() << std::endl;
 
     /*
     std::cout << "\nstart of battle" << std::endl;
@@ -98,12 +98,11 @@ std::cout << "dragonSlayer stats:\n" << dragonSlayer.getStats() << std::endl;
     dragonSlayer.attack( dwarf ); 
     
     std::cout << std::endl << "end of battle stats:" << std::endl;
-    
+    */    
+
     std::vector<Character*> characters { &dwarf, &paladin, &dragon, &dragonSlayer };
     for( auto* character : characters )
         character->printStats();
-    
-    */
 
     return 0;
 }
