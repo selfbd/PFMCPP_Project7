@@ -62,16 +62,20 @@ send me a DM to check your pull request
 #include "Paladin.h"
 #include "Dragon.h"
 #include "DragonSlayer.h"
+#include "Utility.h"
+
 //==========================================================
 //==========================================================
 int main()
 {
-                      //name, hit points, armor. 
+    initialize();
+    
+    //Parameters:   name, hit points, armor
     Dwarf dwarf { "Maldin the Dwarf", 3, 1 };
     Paladin paladin { "Warrick the Paladin", 5, 2 };
     Dragon dragon { "Garry The Dragon", 200, 50 };
     DragonSlayer dragonSlayer { "Virgil the Dragon Slayer", 8, 5 };
-    
+
     std::cout << "\nstart of battle" << std::endl;
 
     paladin.defend();
@@ -89,12 +93,12 @@ int main()
     //the dragon slayer has no friends and kills everyone 
     dragonSlayer.attack( paladin );
     dragonSlayer.attack( dwarf ); 
-    
+
     std::cout << std::endl << "end of battle stats:" << std::endl;
     
     std::vector<Character*> characters { &dwarf, &paladin, &dragon, &dragonSlayer };
     for( auto* character : characters )
         character->printStats();
-    
+
     return 0;
 }
