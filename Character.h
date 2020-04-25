@@ -55,6 +55,8 @@ struct Character
 
     void printStats();
 
+    void levelUpStats(int& currentStatValue, int& initialStatValue);
+
 protected:
     std::vector<std::unique_ptr<Item>> defensiveItems;
     std::vector<std::unique_ptr<Item>> helpfulItems;

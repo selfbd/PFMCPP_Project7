@@ -1,7 +1,6 @@
 #include "Character.h"
 #include <iostream>
 #include <vector>
-
 #include "DefensiveItem.h"
 #include "HelpfulItem.h"
 #include "Utility.h"
@@ -90,7 +89,13 @@ int Character::takeDamage(int damage)
     return hitPoints;
 }
 
-#include <cassert>
+void Character::levelUpStats(int& currentStatValue, int& initialStatValue)
+{
+    if (currentStatValue < initialStatValue) { currentStatValue = initialStatValue; }
+    currentStatValue *= 1.1f;
+    initialStatValue = currentStatValue;   
+}
+
 void Character::attackInternal(Character& other)
 {
     if( other.hitPoints <= 0 )
@@ -103,17 +108,9 @@ void Character::attackInternal(Character& other)
       */
         //assert(false);
 
-        if (hitPoints < *initialHitPoints) { hitPoints = *initialHitPoints; }
-        if (armor < *initialArmorLevel) { armor = *initialArmorLevel; }
-        if (attackDamage < *initialAttackDamage) { attackDamage = *initialAttackDamage; }
-
-        hitPoints *= 1.1f;
-        armor *= 1.1f;
-        attackDamage *= 1.1f;
-
-        *initialHitPoints = hitPoints;
-        *initialArmorLevel = armor;
-        *initialAttackDamage = attackDamage;
+        levelUpStats(hitPoints, *initialHitPoints);
+        levelUpStats(armor, *initialArmorLevel);
+        levelUpStats(attackDamage, *initialAttackDamage);
 
         std::cout << getName() << " defeated " << other.getName() << " and leveled up!" << std::endl;        
     }

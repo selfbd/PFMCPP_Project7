@@ -2,10 +2,10 @@
 #include "Dragon.h"
 #include "Utility.h"
 
-DragonSlayer::DragonSlayer(std::string name_, int hitPoints, int armor) :
-Character(hitPoints, armor, 4),
-name(name_),
-attackItem("attack item", 10) {}
+DragonSlayer::DragonSlayer(std::string name_, int hitPoints, int armor) : Character(hitPoints, armor, 4), name(name_)
+{
+    attackItem.reset(new AttackItem);
+}
 
 const std::string& DragonSlayer::getName() { return name; }
 
@@ -21,7 +21,8 @@ void DragonSlayer::attack(Character& other)
         //look in the Character class for how the other item types are reset after use.
         // Use attack item to boost attack damage
 
-        attackDamage = getAttackDamage() * attackItem.getBoost();
+        attackItem->use(this);
+        attackItem.reset();
         
         while( dragon->getHP() > 0 )
         {
