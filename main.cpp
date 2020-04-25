@@ -78,7 +78,6 @@ int main()
 
     std::cout << "\nstart of battle" << std::endl;
 
-    /*
     paladin.defend();
     dragon.attack( paladin );
     dwarf.attack( dragon );
@@ -94,7 +93,6 @@ int main()
     //the dragon slayer has no friends and kills everyone 
     dragonSlayer.attack( paladin );
     dragonSlayer.attack( dwarf ); 
-    */   
 
     std::cout << std::endl << "end of battle stats:" << std::endl;
     

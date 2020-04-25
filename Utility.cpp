@@ -105,7 +105,7 @@ void useAttackItem(Character* character, Item* item)
         //check Character.h for available member functions you can use.
 
         //assert(false);
-        ch->boostAttackDamage(item->getBoost() * ch->getAttackDamage() * 1.1);
+        //ch->boostAttackDamage(item->getBoost() * ch->getAttackDamage());
     }
     else if( auto* ch = dynamic_cast<Dragon*>(character) )
     {
